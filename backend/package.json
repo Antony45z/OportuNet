@@ -1,0 +1,24 @@
+{
+  "name": "oportunet-backend",
+  "version": "1.0.0",
+  "description": "Servidor backend para OportuNet con Express y MySQL",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "express",
+    "mysql",
+    "backend",
+    "oportunet"
+  ],
+  "author": "Josue Navarro",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mysql2": "^3.15.3"
+  }
+}
+
