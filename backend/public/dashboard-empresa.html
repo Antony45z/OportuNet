@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OportuNet - Dashboard Empresa</title>
+    <link rel="stylesheet" href="CSS/dashboard-empresa.css">
+</head>
+<body>
+    <div class="top-nav">
+        <div class="logo">
+            <span style="font-size: 20px;">◉</span>
+            <span>OportuNet</span>
+        </div>
+        <input type="text" class="search-bar" placeholder="Buscar empleos, personas, empresas...">
+        <div class="nav-icons">🔔 📋 👤</div>
+    </div>
+
+    <div class="main-content">
+        <div class="dashboard-header">
+            <h1>Bienvenido a tu Dashboard</h1>
+            <p>Gestiona tus ofertas de trabajo y conecta con talento diverso</p>
+            <div class="action-buttons">
+                <button class="btn-primary" onclick="window.location.href='crear-oferta.html'">+ Crear oferta de trabajo</button>
+                <button class="btn-secondary">Ver mis ofertas</button>
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">-</div>
+                <div class="stat-label">Ofertas Publicadas</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">-</div>
+                <div class="stat-label">Candidatos</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">-</div>
+                <div class="stat-label">Contrataciones</div>
+            </div>
+        </div>
+
+        <div class="offers-section">
+            <h2>Ofertas Recientes</h2>
+            <div class="offers-list"></div>
+        </div>
+
+        <!-- Feed de publicaciones -->
+        <div class="offers-section" style="margin-top: 30px;">
+            <h2>Feed de Publicaciones</h2>
+
+            <div class="post-creation-box">
+                <div class="post-input-group">
+                    <span class="user-icon">👤</span>
+                    <input type="text" id="postText" placeholder="¿Qué quieres compartir?">
+                </div>
+                <div class="preview-area" id="previewArea"></div>
+                <div class="post-actions">
+                    <div class="post-icons">
+                        <label for="imageInput">🖼️</label>
+                        <input type="file" id="imageInput" accept="image/*" hidden>
+                        <label for="fileInput">📄</label>
+                        <input type="file" id="fileInput" hidden>
+                    </div>
+                    <button id="postBtn">Publicar</button>
+                </div>
+            </div>
+
+            <div class="feed" id="feed"></div>
+        </div>
+    </div>
+
+    <button class="logout-btn" onclick="window.location.href='index.html'">Cerrar sesión</button>
+
+    <script src="JS/dashboard-empresa.js"></script>
+</body>
+</html>

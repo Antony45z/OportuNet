@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OportuNet - Crear Oferta de Trabajo</title>
+    <link rel="stylesheet" href="CSS/crear-oferta.css">
+</head>
+<body>
+    <div class="top-nav">
+        <div class="logo">
+            <span style="font-size: 20px;">◉</span>
+            <span>OportuNet</span>
+        </div>
+        <input type="text" class="search-bar" placeholder="Buscar empleos, personas, empresas...">
+        <div class="nav-icons">
+            🔔 📋 👤
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <div class="form-container">
+            <h1>Crear oferta de trabajo</h1>
+            
+            <form onsubmit="submitForm(event)">
+                <div class="form-group">
+                    <label>Título del puesto</label>
+                    <input type="text" placeholder="ej. Desarrollador frontend senior" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Área laboral</label>
+                        <input type="text" placeholder="ej. Desarrollo de Software" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Ubicación</label>
+                        <input type="text" placeholder="ej. Desarrollador frontend senior" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Modalidad de Trabajo</label>
+                    <select required>
+                        <option value="">Selecciona la modalidad</option>
+                        <option value="remoto">Remoto</option>
+                        <option value="presencial">Presencial</option>
+                        <option value="hibrido">Híbrido</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Descripción del puesto</label>
+                    <textarea placeholder="Describe las responsabilidades, requisitos y beneficios del puesto..." required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Tipos de discapacidad considerados</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="fisica" name="discapacidad" value="fisica">
+                            <label for="fisica">Física</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="visual" name="discapacidad" value="visual">
+                            <label for="visual">Visual</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="auditiva" name="discapacidad" value="auditiva">
+                            <label for="auditiva">Auditiva</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="intelectual" name="discapacidad" value="intelectual">
+                            <label for="intelectual">Intelectual</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="psicosocial" name="discapacidad" value="psicosocial">
+                            <label for="psicosocial">Psicosocial</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="multiple" name="discapacidad" value="multiple">
+                            <label for="multiple">Múltiple</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Adaptaciones Disponibles</label>
+                    <select required>
+                        <option value="">Selecciona adaptaciones</option>
+                        <option value="accesibilidad">Accesibilidad física</option>
+                        <option value="software">Software especializado</option>
+                        <option value="horario">Horario flexible</option>
+                        <option value="teletrabajo">Teletrabajo</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Agregar adaptación personalizada</label>
+                    <div class="add-adaptation">
+                        <input type="text" placeholder="Agregar adaptación personalizada">
+                        <button type="button">+</button>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel" onclick="window.location.href='dashboard-empresa.html'">Cancelar</button>
+                    <button type="submit" class="btn-publish">Publicar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            alert('Oferta de trabajo publicada exitosamente!');
+            window.location.href = 'dashboard-empresa.html';
+        }
+    </script>
+</body>
+</html>

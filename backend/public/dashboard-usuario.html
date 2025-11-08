@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OportuNet - Dashboard Usuario</title>
+    <link rel="stylesheet" href="CSS/dashboard-usuario.css">
+</head>
+<body>
+    <div class="top-nav">
+        <div class="logo">
+            <span style="font-size: 20px;">◉</span>
+            <span>OportuNet</span>
+        </div>
+        <input type="text" class="search-bar" placeholder="Buscar empleos, personas, empresas...">
+        <div class="nav-icons">🔔 📋 👤</div>
+    </div>
+    
+    <div class="main-content">
+        <!-- Panel de Filtros -->
+        <div class="filters-panel">
+            <h3>▼ Filtros de Búsqueda</h3>
+            <div class="filter-group">
+                <label>Tipo de Discapacidad</label>
+                <select>
+                    <option>Select</option>
+                    <option>Física</option>
+                    <option>Visual</option>
+                    <option>Auditiva</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Sector de Trabajo</label>
+                <select>
+                    <option>Select</option>
+                    <option>Tecnología</option>
+                    <option>Salud</option>
+                    <option>Educación</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Ubicación</label>
+                <select>
+                    <option>Select</option>
+                    <option>Remoto</option>
+                    <option>Presencial</option>
+                    <option>Híbrido</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Modalidad</label>
+                <select>
+                    <option>Select</option>
+                    <option>Tiempo Completo</option>
+                    <option>Medio Tiempo</option>
+                    <option>Contrato</option>
+                </select>
+            </div>
+            <div class="filter-buttons">
+                <button class="btn-apply">Aplicar filtros</button>
+                <button class="btn-clear">✕ Limpiar</button>
+            </div>
+        </div>
+        
+        <!-- Contenido Principal -->
+        <div class="content-area">
+            <!-- Caja de Creación de Post -->
+            <div class="post-creation-box">
+                <div class="post-input-group">
+                    <span style="font-size: 24px; color: #999;">👤</span>
+                    <input id="post-text" type="text" placeholder="¿Qué quieres compartir?">
+                </div>
+
+                <!-- Vista previa de archivos -->
+                <div id="preview-area" class="preview-area"></div>
+
+                <div class="post-actions">
+                    <div class="post-icons">
+                        <label for="image-upload" style="cursor:pointer;">🖼️</label>
+                        <input type="file" id="image-upload" accept="image/*" style="display:none;">
+                        
+                        <label for="file-upload" style="cursor:pointer;">📄</label>
+                        <input type="file" id="file-upload" accept=".pdf,.doc,.docx,.txt" style="display:none;">
+                    </div>
+                    <button class="btn-publish" id="publish-btn">Publicar</button>
+                </div>
+            </div>
+            
+            <!-- Feed de Posts -->
+            <div class="feed" id="feed"></div>
+        </div>
+    </div>
+    
+    <button class="logout-btn" onclick="window.location.href='index.html'">Cerrar sesión</button>
+
+    <script src="JS/dashboard-usuario.js"></script>
+</body>
+</html>
